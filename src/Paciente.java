@@ -41,36 +41,12 @@ public class Paciente {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
 
-    public String getTelefone() {
-        return telefone;
-    }
-
     public void setTelefone(String telefone) {
         this.telefone = telefone;
-    }
-
-    public String getEmail() {
-        return email;
     }
 
     public void setEmail(String email) {
@@ -102,47 +78,8 @@ public class Paciente {
 
     }
 
-    public boolean verificarDoenca(String doenca) {
-        return this.historico.contains(doenca); // Verifica se a doença já está no histórico
-    }
-
-    public void removeDoenca(String doenca) {
-        if (this.historico.remove(doenca)) {
-            System.out.println("Doença " + doenca + " removida do histórico.");
-        } else {
-            System.out.println("Doença " + doenca + " não encontrada no histórico.");
-        }
-    }
-
-    public boolean verificarMedicamento(String medicamento) {
-        return this.medicamento.contains(medicamento);// Verifica se o medicamento já está no histórico
-    }
-
-    public void removeMedicamento(String medicamento) {
-        if (this.medicamento.remove(medicamento)) {
-            System.out.println("Medicamento " + medicamento + " removido.");
-        } else {
-            System.out.println("Medicamento " + medicamento + " não encontrado.");
-        }
-    }
-
-    public boolean verificarDispositivo(String dispositivo) {
-        return this.dispositivo.contains(dispositivo);// Verifica se o dispositivo já está no histórico
-    }
-
-    public void removeDispositivo(String dispositivo) {
-        if (this.dispositivo.remove(dispositivo)) {
-            System.out.println("Dispositivo " + dispositivo + " removido.");
-        } else {
-            System.out.println("Dispositivo " + dispositivo + " não encontrado.");
-        }
-    }
-
     public void addConsulta(String data, String motivo){
         this.consulta.add(data + " - " + motivo);
-    }
-    public List<String> getConsulta(){
-        return consulta;
     }
 
     //Método para exibir dados do paciente
